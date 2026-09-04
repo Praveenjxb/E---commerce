@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;0,6..96,800;1,6..96,400&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #0a0a0a;
+  --paper: #faf9f6;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; }
+
+.font-serif { font-family: 'Bodoni Moda', serif; }
+
+.ph {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(120% 90% at 20% 0%, #3a3a3a 0%, #1c1c1c 45%, #0a0a0a 100%);
+  display: flex;
+  align-items: flex-end;
+}
+.ph.light {
+  background: radial-gradient(120% 90% at 80% 0%, #dedad0 0%, #c9c4b6 55%, #b7b19f 100%);
+}
+.ph::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.045) 0 2px, transparent 2px 5px);
+  mix-blend-mode: overlay;
+}
+.ph .icon {
+  position: absolute; inset: 0; margin: auto;
+  width: 40%; height: 40%;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0.9;
+}
+.ph .tag {
+  position: relative; z-index: 2;
+  padding: 12px 14px;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+}
+.ph.light .tag { color: rgba(10,10,10,0.55); }
