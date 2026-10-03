@@ -30,10 +30,7 @@ export default function LoginPage() {
         <button type="submit" className="w-full bg-ink text-paper py-3.5 text-xs font-semibold tracking-widest uppercase">Login</button>
       </form>
 
-      <div className="mt-6 text-xs opacity-55 space-y-1 border-t border-black/10 pt-5">
-        <p>Demo admin — admin@luffy.com / 123456</p>
-        <p>Demo user — user@luffy.com / 123456</p>
-      </div>
+      
 
       <p className="text-sm mt-8">
         New here? <Link href="/signup" className="font-semibold border-b border-ink pb-0.5">Create an account</Link>

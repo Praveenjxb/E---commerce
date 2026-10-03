@@ -22,6 +22,8 @@ export type CartItem = {
   qty: number;
 };
 
+export type PaymentMethod = "card" | "upi" | "cod";
+
 export type Order = {
   id: string;
   userEmail: string;
@@ -31,6 +33,8 @@ export type Order = {
   delivery: number;
   total: number;
   address: string;
+  paymentMethod: PaymentMethod;
+  upiId?: string;
   status: "Processing" | "Shipped" | "Delivered" | "Cancelled";
   date: string;
 };
